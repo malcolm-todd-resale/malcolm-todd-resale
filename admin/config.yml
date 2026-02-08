@@ -1,0 +1,22 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "content/uploads"
+public_folder: "/content/uploads"
+
+collections:
+  - name: "site"
+    label: "Site Content"
+    files:
+      - name: "settings"
+        label: "Resale Page Settings"
+        file: "content/site.json"
+        format: "json"
+        fields:
+          - { label: "Event name", name: "event_name", widget: "string" }
+          - { label: "Ticket type", name: "ticket_type", widget: "string" }
+          - { label: "Date", name: "date", widget: "string" }
+          - { label: "Location", name: "location", widget: "string" }
+          - { label: "Ticket price", name: "ticket_price", widget: "number" }
+          - { label: "Event image", name: "event_image", widget: "image" }
